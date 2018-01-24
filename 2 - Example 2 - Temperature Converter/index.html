@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>In Class 2</title>
+		<script>
+	  <!--Declaring variables-->
+		var celsius = 0;
+		var fahrenheit = 0;
+		
+	  <!-- Function to convert celsius to fahrenheit-->  
+		function CelsiusToFahrenheit(temperatureInCelsius)
+		{
+			return temperatureInCelsius * 9 / 5 + 32;	
+		}
+	  <!-- Function to convert fahrenheit to celsius-->  
+		function FahrenheitToCelsius(temperatureInFahrenheit)
+		{
+			return ( temperatureInFahrenheit - 32) * 5 /9;  
+		}
+		
+		<!-- Function to get the temperature in Celsius--> 
+		function GetTemperatureInCelsius()
+		{
+			var temperatureInCelsius;
+			temperatureInCelsius = parseInt(prompt("Please type the temperature in Celsius: "));
+			
+			<!-- If to make sure the user does not type a word rather than a number--> 
+			if (isNaN(temperatureInCelsius)) 
+			{
+				alert("ERROR MESSAGE - Please type a number!")
+				return false;
+			}
+			else if (temperatureInCelsius<-273.15 || temperatureInCelsius>1500) <!-- If to limit the temperature scale--> 
+			{
+				alert("ERROR Message - the temperature must be between -273.15 and 1500C");
+			}
+			else <!-- Else if to print the temperature in the appropriate colors (red - black - blue)--> 
+			{
+				if(temperatureInCelsius<0)
+				{
+					document.write("<font color='blue'>The temperature in Fahrenheit is "+ CelsiusToFahrenheit(temperatureInCelsius)+"</font>");
+				}
+				else if (temperatureInCelsius == 0)
+				{
+					document.write("The temperature in Fahrenheit is "+ CelsiusToFahrenheit(temperatureInCelsius));
+				}
+				else 
+				{
+					document.write("<font color='red'>The temperature in Fahrenheit is "+ CelsiusToFahrenheit(temperatureInCelsius)+"</font>");
+				}
+			}
+					
+		}
+		
+		<!-- Function to get the temperature in Fahrenheit--> 
+		function GetTemperatureInFahrenheit()
+		{
+			var temperatureInFahrenheit;
+			temperatureInFahrenheit = parseInt(prompt("Please type the temperature in Fahrenheit: "));
+			
+			<!-- If to make sure the user does not type a word rather than a number--> 
+			if (isNaN(temperatureInFahrenheit))
+			{
+				alert("ERROR MESSAGE - Please type a number!")
+				return false;
+			}
+			else if (temperatureInFahrenheit<-450 || temperatureInFahrenheit>4500) <!-- If to limit the temperature scale--> 
+			{
+				alert("ERROR Message - the temperature must be between -450 and 4500F");
+			}
+			else <!-- Else if to print the temperature in the appropriate colors (red - black - blue)--> 			
+			{
+				if(temperatureInFahrenheit<32)
+				{
+					document.write("<font color='blue'>The temperature in Celsius is "+ FahrenheitToCelsius(temperatureInFahrenheit)+"</font>");
+				}
+				else if (temperatureInFahrenheit == 32)
+				{
+					document.write("The temperature in Celsius is "+ FahrenheitToCelsius(temperatureInFahrenheit));
+				}
+				else 
+				{
+					document.write("<font color='red'>The temperature in Celsius is "+ FahrenheitToCelsius(temperatureInFahrenheit)+"</font>");
+				}
+			}		
+		}
+	   
+		</script>
+	</head>
+
+	<body>
+
+		<h2>Hello User, this program is supposed to convert temperatures. You can convert Celsius to Fahrenheit and vice versa. </h2>
+		<h2>Follow the instructions below to insert the temperature.</h2></br>
+		
+		<!-- Code for the first button-->
+		<h2 id="who">Click the button below and enter the temperature in Celsius, it will convert to Fahrenheit.</h2>
+		<button type="button" onclick= "GetTemperatureInCelsius()">Celsius to Fahrenheit</button>
+	 
+ 
+		<!-- Code for the second button-->
+		<h2 id="nick">Or you can click the button below and convert Fahrenheit to Celsius</h2>
+		<button type="button" onclick= "GetTemperatureInFahrenheit()">Fahrenheit to Celsius</button>
+	 
+	</body>
+</html>

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>In Class 3</title>
+		<script>
+		
+		<!--Function to launch the rocket-->
+		function LaunchRocket()
+		{
+			var i = 0;
+			document.write("<img id='image' src='rocket.png' alt='Rocket Ship' width='200px'>")
+			document.write("<h1>Countdown to BLASTOFF</h1>");
+			for(i=10; i>0; i--)<!--For Loop to countdown-->
+			{
+				document.write("<p>"+i+"...</p>");
+				if (i==1)<!--IF to print BLASTOFF at the end-->
+				{
+					document.write("<h1>BLASTOFF</h1>");
+				}
+			}
+			
+		}
+	   
+		</script>
+	</head>
+
+	<body>
+
+		<h2>Hello User, this program is supposed to launch a rocket ship after the countdown of 10. </h2></br>
+		<h2>Hit the button and check it.</h2></br>
+		
+		<!-- Rocket Ship Image-->
+		<img src="rocket.png" alt="Rocket Ship" width="200px">
+		
+		<!-- Code for the Launch button-->
+		<h2 id="who">Hit this button to launch the rocket ship.</h2>
+		<button type="button" onclick= "LaunchRocket()">LAUNCH</button>
+	 
+	</body>
+</html>

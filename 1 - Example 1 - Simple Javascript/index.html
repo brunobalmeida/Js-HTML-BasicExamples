@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>In Class 1</title>
+		<script>
+	  <!--Declaring variables to store the names-->
+		var firstName;
+		var lastName;
+		var userName;
+		var nickName;
+	  <!-- Function to request and store the given and last name-->  
+		function GetName()
+		{
+			firstName = prompt("Please, enter your first name:");
+			lastName = prompt("Please enter your family name:"); 
+			userName = firstName + "." + lastName;
+		}
+	  <!-- Function to request and store the nickname and request the display function-->
+		function GetNickName()
+		{
+			nickName = prompt("Please, enter your nickname: ");
+			ShowOutPut();
+		}
+	   <!-- Function to display all the information collected-->
+		function ShowOutPut()
+		{
+			document.write("<h2>Your user name is: </h2>" + userName);
+			document.write("<h2></br>But we'll call you </h2>" + nickName);
+		}	
+		</script>
+	</head>
+
+	<body>
+
+		<h2>Hello User, this program is supposed to get your given name and family name, and your nickname as well. </h2>
+		<h2>Then we will display the full information on the screen.</h2></br>
+		
+		<!-- Code for the first button-->
+		<h2 id="who">So, let's start. Click on the button below and insert your name.</h2>
+		<button type="button" onclick= "GetName()">Enter your name</button>
+	 
+		<!-- Code for the second button-->
+		<h2 id="nick">Now, click on the button below and let us know how you want to be called.</h2>
+		<button type="button" onclick= "GetNickName()">Enter your nickname</button>
+	 
+	</body>
+</html>

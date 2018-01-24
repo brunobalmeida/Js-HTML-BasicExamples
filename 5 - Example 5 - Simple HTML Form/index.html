@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>In Class 5 - Forms Task</title>
+	</head>
+	<body>
+
+		<h2>Hello User, this is a quick survey. <br>Please answer each question below selecting a value from 1 to 5.</h2></br>
+		<h2>Please rate from 1 to 5 the music genre below (With 1 being the highest scale and 5 the lowest: </h2></br>
+    
+		
+    <form name="ICT5Form" action="mailto:bpennabarbosade2825@conestogac.on.ca?subject=ICT5Form"" method="post" enctype="text/plain">
+    
+      <fieldset>
+        <legend>Rock</legend>
+        <input type="radio" name="raterock" value="1">1<br>
+        <input type="radio" name="raterock" value="2">2<br>
+        <input type="radio" name="raterock" value="3">3<br>
+        <input type="radio" name="raterock" value="4">4<br>
+        <input type="radio" name="raterock" value="5">5<br>
+      </fieldset>
+      <fieldset>
+        <legend>Pop</legend>
+        <input type="radio" name="ratePop" value="1">1<br>
+        <input type="radio" name="ratePop" value="2">2<br>
+        <input type="radio" name="ratePop" value="3">3<br>
+        <input type="radio" name="ratePop" value="4">4<br>
+        <input type="radio" name="ratePop" value="5">5<br>
+      </fieldset>
+      <fieldset>
+        <legend>Funk</legend>
+        <input type="radio" name="ratefunk" value="1">1<br>
+        <input type="radio" name="ratefunk" value="2">2<br>
+        <input type="radio" name="ratefunk" value="3">3<br>
+        <input type="radio" name="ratefunk" value="4">4<br>
+        <input type="radio" name="ratefunk" value="5">5<br>
+      </fieldset>
+      <fieldset>
+        <legend>Country</legend>
+        <input type="radio" name="rateCountry" value="1">1<br>
+        <input type="radio" name="rateCountry" value="2">2<br>
+        <input type="radio" name="rateCountry" value="3">3<br>
+        <input type="radio" name="rateCountry" value="4">4<br>
+        <input type="radio" name="rateCountry" value="5">5<br>
+      </fieldset>
+      <fieldset>
+        <legend>Blues</legend>
+        <input type="radio" name="rateBlues" value="1">1<br>
+        <input type="radio" name="rateBlues" value="2">2<br>
+        <input type="radio" name="rateBlues" value="3">3<br>
+        <input type="radio" name="rateBlues" value="4">4<br>
+        <input type="radio" name="rateBlues" value="5">5<br>
+      </fieldset>
+		
+		<p>Please indicate your Age:</p>
+		<select name="age" size="1">
+			<option value="lessthan18">Less than 18</option>
+			<option value="20s">Between 19 and 29</option>
+			<option value="30s" selected>Between 30 and 39</option>
+			<option value="40ormore">More than 40</option>
+			<option value="notdeclared">Don't want to inform</option>
+		</select><br />
+		
+		<p>Please indicate your gender:</p>
+		<select name="gender" size="1">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="notdeclared">Don't want to inform</option>
+		</select><br />
+      <br>
+      <input type="reset" value="Reset"><br />
+      <input type="submit" value="Submit"><br />
+      
+    </form>
+		
+		
+	</body>
+</html>
